@@ -1,0 +1,267 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  
+.content-wraper
+  display: flex
+  flex-direction: column
+  background-image: url("back2.png")
+  @media (min-width: 1000px)
+    background-image: url("back4.png")
+  height: 1000px
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+  .headder
+    position: fixed
+    display: flex
+    justify-content: space-between
+    height: 150px
+    width: 100%
+    color: black
+    background: linear-gradient(0deg, rgba(251,251,251,0) 0%, rgba(253,253,253,0.6029776674937966) 15%, rgba(255,255,255,0.9776674937965261) 77%)
+    mix-blend-mode: screen
+    text-align: right
+    font-family: 'IBM Plex Mono',monospace
+    z-index: 2
+
+    .headder__hamburger
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 50px
+      width: 50px
+      margin-top: 7px
+      transition: .5s
+      @media (min-width: 1000px)
+        display: none
+
+      .headder__hamburger__1
+        width: 100%
+        height: 10px
+        background-color: black
+        border-radius: 5px
+        transition: .5s
+
+      .headder__hamburger__2
+        width: 100%
+        height: 10px
+        background-color: black
+        border-radius: 5px
+
+      .headder__hamburger__3
+        width: 100%
+        height: 10px
+        background-color: black
+        border-radius: 5px
+        transition: .5s
+
+    .headder__hamburger__clicked
+      transform: rotate(-90deg)
+      transition: .5s
+
+      .headder__hamburger__1__clicked
+        width: 40px
+        transform: rotate(45deg)
+        margin-left: 20px
+        margin-top: 10px
+        transition: .5s
+
+      .headder__hamburger__3__clicked
+        width: 40px
+        transform: rotate(-45deg)
+        margin-left: 20px
+        margin-bottom: 10px
+        transition: .5s
+
+    .headder__text
+      display: flex
+      flex-direction: column
+
+      .headder__text__name
+        font-size: 3.5em
+
+      .headder__text__title
+        font-size: 2.6em
+
+    .headder__nav
+      display: none
+      width: 60%
+      justify-content: space-around
+      font-size: 2.5em
+      color: black
+      font-family: 'IBM Plex Mono',monospace
+      align-items: flex-end
+      text-transform: capitalize
+      @media (min-width: 1000px)
+        display: flex
+      a
+        text-decoration: none
+        color: black
+      .nav__home
+      .nav__about-me
+      .nav__my-work
+
+  .nav
+    display: flex
+    position: fixed
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100vh
+    background: gray
+    margin-top: -2000px
+    transition: .7s
+    font-size: 3em
+    text-transform: uppercase
+    font-family: Megrim
+    color: white
+    text-transform: capitalize
+    a
+      text-decoration: none
+      color: white
+
+    .nav__home
+    .nav__about-me
+    .nav__my-work
+
+    .nav__blog
+  .nav__clicked
+    margin-top: 0px
+    transition: 1s
+
+  .content
+    display: flex
+    flex-direction: column
+    align-self: center
+    width: 90%
+    height: auto
+    background-color: gray
+    color: white
+    margin-top: 150px
+    @media (min-width: 1000px)
+      justify-content: center
+      font-size: 1em
+      letter-spacing: .15em
+      line-height: 30px
+
+  .about
+    display: flex
+    flex-direction: column
+    align-self: center
+    align-items: center
+    width: 90%
+    height: auto
+    background-color: gray
+    color: white
+    margin-top: 150px
+    overflow: hidden
+    @media (min-width: 1000px)
+      justify-content: center
+
+    .about__head
+      width: 98%
+      height: 200px
+      color: white
+      font-size: 3em
+      justify-content: flex-end
+      font-family: 'IBM Plex Mono', monospace
+      animation: animate .27s 2
+      @media (min-width: 1000px)
+        font-size: 7em
+        text-align: center
+
+    .about__content
+      color: white
+      width: 90%
+      animation: fadein 1s 1
+      @media (min-width: 1000px)
+        font-size: 1em
+        letter-spacing: .15em
+        line-height: 30px
+
+
+@keyframes fadein
+  0%
+    color: rgb(255,255,255)
+    color: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 36%)
+
+  25%
+        color: cyan
+        font-family: 'Libre Barcode 39'
+        letter-spacing: .15em
+
+  50%
+        color: Magenta
+        font-family: 'monospace'
+        letter-spacing: .15em
+
+  75%
+        font-family: 'VT323'
+        letter-spacing: .15em
+
+  100%
+        background-position: 0 0
+        filter: hue-rotate(360deg)
+
+@keyframes animate
+      0%
+            filter: hue-rotate(0deg)
+
+      10%
+            padding-left: 10px
+            color: cyan
+            font-family: 'Libre Barcode 39'
+            letter-spacing: .25em
+            line-height: -50px
+
+      20%
+            padding-left: 70px
+            padding-top: 22px
+            color: cyan
+            font-family: 'Libre Barcode 39'
+            letter-spacing: .1em
+
+      30%
+            padding-right: 30px
+            padding-top: 26px
+            color: yellow
+            font-family: 'Libre Barcode 39'
+            letter-spacing: .1em
+
+      40%
+            padding-left: 40px
+            padding-top: 28px
+            color: yellow
+            font-family: 'Libre Barcode 39'
+            letter-spacing: .01em
+
+      50%
+            padding-right: 30px
+            padding-top: 35px
+            color: Magenta
+            font-family: 'Libre Barcode 39'
+            letter-spacing: .01em
+
+      60%
+            padding-left: 10px
+            padding-top: 21px
+            color: Magenta
+            font-family: 'Libre Barcode 39'
+            letter-spacing: .01em
+
+      70%
+            padding-top: 17px
+            padding-right: 30px
+            font-family: 'Libre Barcode 39'
+            letter-spacing: .01em
+
+      80%
+            padding-top: 10px
+
+      100%
+            filter: hue-rotate(360deg)
