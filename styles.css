@@ -140,6 +140,12 @@
   font-size: 2.6em;
 }
 
+@media (max-width: 1000px) {
+  .content-wraper .headder .headder__text .headder__text__title {
+    display: none;
+  }
+}
+
 .content-wraper .headder .headder__nav {
   display: none;
   width: 60%;
