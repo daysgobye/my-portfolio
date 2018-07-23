@@ -312,8 +312,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 90%;
-  height: 500px;
+  height: auto;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 150px;
@@ -322,6 +326,16 @@
   background: var(--cardColor);
   font-family: 'IBM Plex Mono', monospace;
   color: var(--textColor);
+}
+
+@media (min-width: 1000px) {
+  .content-wraper .contact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 500px;
+  }
 }
 
 .content-wraper .contact .contact__card {
@@ -361,8 +375,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 40%;
+  width: 100%;
   height: 100%;
+}
+
+@media (min-width: 1000px) {
+  .content-wraper .contact .contact__email {
+    width: 40%;
+  }
 }
 
 .content-wraper .contact .contact__email form {
