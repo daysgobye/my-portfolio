@@ -3,6 +3,10 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  --cardColor: #6e6c7a;
+  --altCardColor: #39216d;
+  --textColor: white;
+  --altTextColor: #f7d82d;
 }
 
 .content-wraper {
@@ -190,20 +194,20 @@
           align-items: center;
   width: 100%;
   height: 100vh;
-  background: gray;
+  background: var(--cardColor);
   margin-top: -2000px;
   -webkit-transition: .7s;
   transition: .7s;
   font-size: 3em;
   text-transform: uppercase;
   font-family: Megrim;
-  color: white;
+  color: var(--textColor);
   text-transform: capitalize;
 }
 
 .content-wraper .nav a {
   text-decoration: none;
-  color: white;
+  color: var(--textColor);
 }
 
 .content-wraper .nav__clicked {
@@ -224,8 +228,8 @@
       align-self: center;
   width: 90%;
   height: auto;
-  background-color: gray;
-  color: white;
+  background-color: var(--cardColor);
+  color: var(--textColor);
   margin-top: 150px;
 }
 
@@ -255,8 +259,8 @@
           align-items: center;
   width: 90%;
   height: auto;
-  background-color: gray;
-  color: white;
+  background-color: var(--cardColor);
+  color: var(--textColor);
   margin-top: 150px;
   overflow: hidden;
 }
@@ -272,7 +276,7 @@
 .content-wraper .about .about__head {
   width: 98%;
   height: 200px;
-  color: white;
+  color: var(--textColor);
   font-size: 3em;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -290,7 +294,7 @@
 }
 
 .content-wraper .about .about__content {
-  color: white;
+  color: var(--textColor);
   width: 90%;
   -webkit-animation: fadein 1s 1;
           animation: fadein 1s 1;
@@ -301,6 +305,134 @@
     font-size: 1em;
     letter-spacing: .15em;
     line-height: 30px;
+  }
+}
+
+.content-wraper .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  height: 500px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 150px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background: var(--cardColor);
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--textColor);
+}
+
+.content-wraper .contact .contact__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+  height: 100%;
+  padding-top: 20px;
+  -webkit-transform: translatex(-2000px);
+          transform: translatex(-2000px);
+  -webkit-animation: zoomIn .37s forwards;
+          animation: zoomIn .37s forwards;
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.content-wraper .contact .contact__card .contact__card--misc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content-wraper .contact .contact__card .contact__card--misc p {
+  color: var(--altTextColor);
+}
+
+.content-wraper .contact .contact__email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  height: 100%;
+}
+
+.content-wraper .contact .contact__email form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-transform: translateX(2000px);
+          transform: translateX(2000px);
+  -webkit-animation: zoomIn .37s forwards;
+          animation: zoomIn .37s forwards;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+.content-wraper .contact .contact__email form input {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border: none;
+  padding: 6px;
+  color: var(--altTextColor);
+  background: var(--altCardColor);
+}
+
+.content-wraper .contact .contact__email form label {
+  padding-top: 20px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.content-wraper .contact .contact__email form .submit {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 10px;
+  border-radius: 3px;
+  margin-top: -43px;
+  margin-right: 7px;
+  border: none;
+  background: var(--cardColor);
+}
+
+.content-wraper .contact .contact__email form textarea {
+  width: 100%;
+  height: 63%;
+  border: none;
+  outline: none;
+  resize: none;
+  color: var(--altTextColor);
+  background: var(--altCardColor);
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 

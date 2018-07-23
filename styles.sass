@@ -2,7 +2,10 @@
   margin: 0
   padding: 0
   box-sizing: border-box
-  
+  --cardColor: #6e6c7a
+  --altCardColor: #39216d
+  --textColor: white
+  --altTextColor: #f7d82d
 .content-wraper
   display: flex
   flex-direction: column
@@ -116,17 +119,17 @@
     align-items: center
     width: 100%
     height: 100vh
-    background: gray
+    background: var(--cardColor)
     margin-top: -2000px
     transition: .7s
     font-size: 3em
     text-transform: uppercase
     font-family: Megrim
-    color: white
+    color: var(--textColor)
     text-transform: capitalize
     a
       text-decoration: none
-      color: white
+      color: var(--textColor)
 
     .nav__home
     .nav__about-me
@@ -143,8 +146,8 @@
     align-self: center
     width: 90%
     height: auto
-    background-color: gray
-    color: white
+    background-color: var(--cardColor)
+    color: var(--textColor)
     margin-top: 150px
     @media (min-width: 1000px)
       justify-content: center
@@ -159,8 +162,8 @@
     align-items: center
     width: 90%
     height: auto
-    background-color: gray
-    color: white
+    background-color: var(--cardColor)
+    color: var(--textColor)
     margin-top: 150px
     overflow: hidden
     @media (min-width: 1000px)
@@ -169,7 +172,7 @@
     .about__head
       width: 98%
       height: 200px
-      color: white
+      color: var(--textColor)
       font-size: 3em
       justify-content: flex-end
       font-family: 'IBM Plex Mono', monospace
@@ -179,7 +182,7 @@
         text-align: center
 
     .about__content
-      color: white
+      color: var(--textColor)
       width: 90%
       animation: fadein 1s 1
       @media (min-width: 1000px)
@@ -187,6 +190,73 @@
         letter-spacing: .15em
         line-height: 30px
 
+  .contact
+    display: flex
+    width: 90%
+    height: 500px
+    justify-content: space-around
+    margin-top: 150px
+    align-self: center
+    background: var(--cardColor)
+    font-family: 'IBM Plex Mono', monospace
+    color: var(--textColor)
+    .contact__card
+      display: flex
+      flex-direction: column
+      width: 40%
+      height: 100%
+      padding-top: 20px
+      transform: translatex(-2000px)
+      animation: zoomIn .37s forwards
+      animation-delay: .4s;
+      .contact__card--misc
+        display: flex
+        flex-direction: column
+        p
+          color: var(--altTextColor)
+    .contact__email
+      display: flex
+      width: 40%
+      height: 100%
+      form
+        display: flex
+        flex-direction: column
+        width: 100%
+        transform: translateX(2000px)
+        animation: zoomIn .37s forwards
+        animation-delay: .2s;
+        input
+          align-self: flex-start
+          border: none
+          padding: 6px
+          color: var(--altTextColor)
+          background: var(--altCardColor)
+        label
+          padding-top: 20px
+          align-self: flex-start
+          
+        .submit
+          align-self: flex-end
+          padding: 10px
+          border-radius: 3px
+          margin-top: -43px
+          margin-right: 7px
+          border: none
+          background: var(--cardColor)
+        textarea
+          width: 100%
+          height: 63%
+          border: none
+          outline: none
+          resize: none
+          color: var(--altTextColor)
+          background: var(--altCardColor)
+
+@keyframes zoomIn
+  0%
+
+  100%
+    transform: translateX(0)
 
 @keyframes fadein
   0%
