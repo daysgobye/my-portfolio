@@ -9,9 +9,9 @@
 .content-wraper
   display: flex
   flex-direction: column
-  background-image: url("back2.png")
+  background-image: url("imgs/back2.png")
   @media (min-width: 1000px)
-    background-image: url("back4.png")
+    background-image: url("imgs/back4.png")
   height: 1000px
   background-attachment: fixed
   background-position: center
@@ -39,6 +39,7 @@
       width: 50px
       margin-top: 7px
       transition: .5s
+      z-index: 10
       @media (min-width: 1000px)
         display: none
 
@@ -139,6 +140,7 @@
   .nav__clicked
     margin-top: 0px
     transition: 1s
+    z-index: 1
 
   .content
     display: flex
@@ -189,6 +191,48 @@
         font-size: 1em
         letter-spacing: .15em
         line-height: 30px
+  .mywork
+    display: flex
+    flex-direction: column
+    align-self: center
+    align-items: center
+    width: 90%
+    height: 90vw
+    margin-top: 150px
+    background: var(--cardColor)
+    @media (min-width: 1000px)
+      height: 90vh
+      justify-content: center
+    .mywork__site
+      width: 97%
+      height: 97%
+      background-position: center
+      background-size: contain
+      background-repeat: no-repeat
+      ul
+        display: flex
+        flex-wrap: wrap
+        font-size: 1em
+        justify-content: space-around
+        @media (min-width: 1000px)
+          flex-direction: column
+          font-size: 2em
+        li
+          list-style: none
+          color: var(--textColor)
+          font-family: 'IBM Plex Mono', monospace
+          text-align: right
+            
+        .slected
+          text-decoration: line-through
+    .Camp_Site
+      background-image: url("imgs/camp.png") 
+    .Code_Notes
+      background-image: url("imgs/codenotes.png")
+    .Clean_Water
+      background-image: url('imgs/water.png')
+    .Login_Page
+      background-image: url("imgs/moutan.png")
 
   .contact
     display: flex
@@ -206,13 +250,20 @@
       height: 500px
     .contact__card
       display: flex
-      flex-direction: column
-      width: 40%
+      flex-direction: row-reverse
+      justify-content: space-around
+      width: 100%
       height: 100%
       padding-top: 20px
       transform: translatex(-2000px)
       animation: zoomIn .37s forwards
       animation-delay: .4s;
+      @media (min-width: 1000px)
+        justify-content: flex-start
+        flex-direction: column
+        width: 40%
+      img
+        margin: 5px
       .contact__card--misc
         display: flex
         flex-direction: column
@@ -236,7 +287,8 @@
           border: none
           padding: 6px
           color: var(--altTextColor)
-          background: var(--altCardColor)
+          background: var(--cardColor)
+          border-bottom: solid 1px var(--altCardColor)
         label
           padding-top: 20px
           align-self: flex-start
@@ -251,12 +303,13 @@
           background: var(--cardColor)
         textarea
           width: 100%
-          height: 63%
+          height: auto
           border: none
           outline: none
           resize: none
           color: var(--altTextColor)
           background: var(--altCardColor)
+
 
 @keyframes zoomIn
   0%

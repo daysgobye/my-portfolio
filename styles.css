@@ -17,7 +17,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url("back2.png");
+  background-image: url("imgs/back2.png");
   height: 1000px;
   background-attachment: fixed;
   background-position: center;
@@ -27,7 +27,7 @@
 
 @media (min-width: 1000px) {
   .content-wraper {
-    background-image: url("back4.png");
+    background-image: url("imgs/back4.png");
   }
 }
 
@@ -66,6 +66,7 @@
   margin-top: 7px;
   -webkit-transition: .5s;
   transition: .5s;
+  z-index: 10;
 }
 
 @media (min-width: 1000px) {
@@ -214,6 +215,7 @@
   margin-top: 0px;
   -webkit-transition: 1s;
   transition: 1s;
+  z-index: 1;
 }
 
 .content-wraper .content {
@@ -308,6 +310,90 @@
   }
 }
 
+.content-wraper .mywork {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  height: 90vw;
+  margin-top: 150px;
+  background: var(--cardColor);
+}
+
+@media (min-width: 1000px) {
+  .content-wraper .mywork {
+    height: 90vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.content-wraper .mywork .mywork__site {
+  width: 97%;
+  height: 97%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.content-wraper .mywork .mywork__site ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 1em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 1000px) {
+  .content-wraper .mywork .mywork__site ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 2em;
+  }
+}
+
+.content-wraper .mywork .mywork__site ul li {
+  list-style: none;
+  color: var(--textColor);
+  font-family: 'IBM Plex Mono', monospace;
+  text-align: right;
+}
+
+.content-wraper .mywork .mywork__site ul .slected {
+  text-decoration: line-through;
+}
+
+.content-wraper .mywork .Camp_Site {
+  background-image: url("imgs/camp.png");
+}
+
+.content-wraper .mywork .Code_Notes {
+  background-image: url("imgs/codenotes.png");
+}
+
+.content-wraper .mywork .Clean_Water {
+  background-image: url("imgs/water.png");
+}
+
+.content-wraper .mywork .Login_Page {
+  background-image: url("imgs/moutan.png");
+}
+
 .content-wraper .contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -342,11 +428,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 40%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
   height: 100%;
   padding-top: 20px;
   -webkit-transform: translatex(-2000px);
@@ -355,6 +443,23 @@
           animation: zoomIn .37s forwards;
   -webkit-animation-delay: .4s;
           animation-delay: .4s;
+}
+
+@media (min-width: 1000px) {
+  .content-wraper .contact .contact__card {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 40%;
+  }
+}
+
+.content-wraper .contact .contact__card img {
+  margin: 5px;
 }
 
 .content-wraper .contact .contact__card .contact__card--misc {
@@ -408,7 +513,8 @@
   border: none;
   padding: 6px;
   color: var(--altTextColor);
-  background: var(--altCardColor);
+  background: var(--cardColor);
+  border-bottom: solid 1px var(--altCardColor);
 }
 
 .content-wraper .contact .contact__email form label {
@@ -430,7 +536,7 @@
 
 .content-wraper .contact .contact__email form textarea {
   width: 100%;
-  height: 63%;
+  height: auto;
   border: none;
   outline: none;
   resize: none;
