@@ -6,12 +6,14 @@
   --altCardColor: #39216d
   --textColor: white
   --altTextColor: #f7d82d
+  --bordeR: 6px
+  --bShadow: 0px 0px 20px 2px rgba(51,51,51,1);
 .content-wraper
   display: flex
   flex-direction: column
   background-image: url("imgs/back2.png")
   @media (min-width: 1000px)
-    background-image: url("imgs/back4.png")
+    background-image: url("imgs/back4.jpg")
   height: 1000px
   background-attachment: fixed
   background-position: center
@@ -108,9 +110,9 @@
       a
         text-decoration: none
         color: black
-      .nav__home
-      .nav__about-me
-      .nav__my-work
+      // .nav__home
+      // .nav__about-me
+      // .nav__my-work
 
   .nav
     display: flex
@@ -132,11 +134,11 @@
       text-decoration: none
       color: var(--textColor)
 
-    .nav__home
-    .nav__about-me
-    .nav__my-work
+    // .nav__home
+    // .nav__about-me
+    // .nav__my-work
 
-    .nav__contact
+    // .nav__contact
   .nav__clicked
     margin-top: 0px
     transition: 1s
@@ -151,6 +153,8 @@
     background-color: var(--cardColor)
     color: var(--textColor)
     margin-top: 150px
+    border-radius: var(--bordeR)
+    box-shadow: var(--bShadow)
     @media (min-width: 1000px)
       justify-content: center
       font-size: 1em
@@ -165,6 +169,8 @@
     width: 90%
     height: auto
     background-color: var(--cardColor)
+    border-radius: var(--bordeR)
+    box-shadow: var(--bShadow)
     color: var(--textColor)
     margin-top: 150px
     overflow: hidden
@@ -200,6 +206,8 @@
     height: 90vw
     margin-top: 150px
     background: var(--cardColor)
+    border-radius: var(--bordeR)
+    box-shadow: var(--bShadow)
     @media (min-width: 1000px)
       height: 90vh
       justify-content: center
@@ -225,14 +233,19 @@
             
         .slected
           text-decoration: line-through
+          animation: glitch .51s 1
     .Camp_Site
       background-image: url("imgs/camp.png") 
+      animation: glitch .31s 1
     .Code_Notes
       background-image: url("imgs/codenotes.png")
+      animation: fadein .1s 1
     .Clean_Water
       background-image: url('imgs/water.png')
+      animation: glitch .21s 1
     .Login_Page
       background-image: url("imgs/moutan.png")
+      animation: animate .21s 1
 
   .contact
     display: flex
@@ -245,6 +258,8 @@
     background: var(--cardColor)
     font-family: 'IBM Plex Mono', monospace
     color: var(--textColor)
+    border-radius: var(--bordeR)
+    box-shadow: var(--bShadow)
     @media (min-width: 1000px)
       flex-direction: row
       height: 500px
@@ -257,7 +272,7 @@
       padding-top: 20px
       transform: translatex(-2000px)
       animation: zoomIn .37s forwards
-      animation-delay: .4s;
+      animation-delay: .4s
       @media (min-width: 1000px)
         justify-content: flex-start
         flex-direction: column
@@ -281,7 +296,7 @@
         width: 100%
         transform: translateX(2000px)
         animation: zoomIn .37s forwards
-        animation-delay: .2s;
+        animation-delay: .2s
         input
           align-self: flex-start
           border: none
@@ -316,6 +331,16 @@
 
   100%
     transform: translateX(0)
+
+@keyframes glitch
+  25%
+    filter: blur(3px)
+  50%
+    filter: hue-rotate(200deg)
+  75%
+    filter: invert(100%)
+  100%
+    filter: grayscale(100%)
 
 @keyframes fadein
   0%
