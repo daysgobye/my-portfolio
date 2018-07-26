@@ -11,7 +11,7 @@
 .content-wraper
   display: flex
   flex-direction: column
-  background-image: url("imgs/back2.png")
+  background-image: url("imgs/back2.jpg")
   @media (min-width: 1000px)
     background-image: url("imgs/back4.jpg")
   height: 1000px
@@ -197,6 +197,12 @@
         font-size: 1em
         letter-spacing: .15em
         line-height: 30px
+      img
+        float: left
+        margin-right: 1.5em
+        margin-bottom: .5em
+        shape-outside:  polygon(50% 0%, 67% 4%, 74% 16%, 75% 38%, 67% 52%, 90% 64%, 97% 81%, 76% 96%, 53% 99%, 7% 92%, 0% 86%, 1% 64%, 20% 51%, 14% 32%, 16% 13%, 21% 3%);
+
   .mywork
     display: flex
     flex-direction: column
@@ -217,6 +223,16 @@
       background-position: center
       background-size: contain
       background-repeat: no-repeat
+      button
+        margin-top: 40px
+        width: 100px
+        height: 50px
+        border: none
+        border-bottom: 2px solid var(--altTextColor)
+        background: var(--cardColor)
+        a
+          text-decoration: none
+          color: var(--textColor)
       ul
         display: flex
         flex-wrap: wrap

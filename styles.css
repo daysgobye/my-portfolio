@@ -13,7 +13,7 @@
 .content-wraper {
   display: flex;
   flex-direction: column;
-  background-image: url("imgs/back2.png");
+  background-image: url("imgs/back2.jpg");
   height: 1000px;
   background-attachment: fixed;
   background-position: center;
@@ -246,6 +246,13 @@
   }
 }
 
+.content-wraper .about .about__content img {
+  float: left;
+  margin-right: 1.5em;
+  margin-bottom: .5em;
+  shape-outside: polygon(50% 0%, 67% 4%, 74% 16%, 75% 38%, 67% 52%, 90% 64%, 97% 81%, 76% 96%, 53% 99%, 7% 92%, 0% 86%, 1% 64%, 20% 51%, 14% 32%, 16% 13%, 21% 3%);
+}
+
 .content-wraper .mywork {
   display: flex;
   flex-direction: column;
@@ -272,6 +279,20 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.content-wraper .mywork .mywork__site button {
+  margin-top: 40px;
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid var(--altTextColor);
+  background: var(--cardColor);
+}
+
+.content-wraper .mywork .mywork__site button a {
+  text-decoration: none;
+  color: var(--textColor);
 }
 
 .content-wraper .mywork .mywork__site ul {
