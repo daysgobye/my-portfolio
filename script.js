@@ -6,6 +6,7 @@ const ham1 = document.querySelector('.headder__hamburger__1')
 const list = document.querySelectorAll('li')
 const mywork = document.querySelector('.mywork__site')
 const liveSite = document.querySelector('.mysite__site--btn')
+const frontPage = document.querySelector('.word')
 let lastLi = 1
 let lastpicked;
 function portPicker(){
@@ -21,7 +22,7 @@ function portPicker(){
   lastpicked = picked
 }
 function live(){
-liveSite.querySelector('a').href = "https://www."+lastpicked+".com"
+liveSite.querySelector('a').href = "https://daysgobye.github.io/"+lastpicked+"/"
 }
 function hamburger__clicked() {
   ham1.classList.toggle ("headder__hamburger__1__clicked")
@@ -29,6 +30,11 @@ function hamburger__clicked() {
   headHam.classList.toggle("headder__hamburger__clicked") 
   nav.classList.toggle ("nav__clicked")
 }
+function showName(){
+  frontPage.classList.remove('gone')
+  frontPage.classList.add('here')
+}
+setTimeout(showName,2000)
 hammy.addEventListener('click',hamburger__clicked)
 list.forEach(item => item.addEventListener('click',portPicker)) 
 liveSite.addEventListener('click', live)

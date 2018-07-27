@@ -143,24 +143,55 @@
     margin-top: 0px
     transition: 1s
     z-index: 1
-
+    // ----------------------homepage--------------------
   .content
     display: flex
-    flex-direction: column
-    align-self: center
-    width: 90%
-    height: auto
-    background-color: var(--cardColor)
-    color: var(--textColor)
+    justify-content: center
+    align-items: center
     margin-top: 150px
-    border-radius: var(--bordeR)
-    box-shadow: var(--bShadow)
+    background: hsla(0, 0%, 29%, 0.34)
+    width: 100%
+    height: 100vh
+    position: fixed
+    font-family: 'IBM Plex Mono', monospace
+
+    // display: flex
+    // flex-direction: column
+    // align-self: center
+    // width: 90%
+    // height: auto
+    // background-color: var(--cardColor)
+    // color: var(--textColor)
+    // margin-top: 150px
+    // border-radius: var(--bordeR)
+    // box-shadow: var(--bShadow)
     @media (min-width: 1000px)
       justify-content: center
       font-size: 1em
       letter-spacing: .15em
       line-height: 30px
-
+    h1
+      font-size: 200px
+      color: var(--textColor)
+      transition: 1s
+    .word
+      display: flex
+      align-items: center
+      border-bottom: 1px solid #ffffff
+      height: 200px
+    .here
+      display: flex
+      h1.hide 
+        transition: all 1.5s ease-in-out
+        animation: showName 1.37s forwards
+      .mid
+          padding-left: 80px
+          padding-right: 80px   
+    .gone
+      display: flex
+      .hide
+        display: none  
+    //=------------------------------about-----------------
   .about
     display: flex
     flex-direction: column
@@ -340,7 +371,18 @@
           resize: none
           color: var(--altTextColor)
           background: var(--altCardColor)
-
+    //------------------------------------keyframes-----------      
+@keyframes showName
+  0%
+    opacity: 0
+  25%
+    opacity: .25
+  50%
+    opacity: .5
+  75%
+    opacity: .75
+  100%
+   opacity: 1
 
 @keyframes zoomIn
   0%
