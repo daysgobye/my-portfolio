@@ -144,6 +144,7 @@
 .content-wraper .headder .headder__nav a {
   text-decoration: none;
   color: black;
+  margin-bottom: 15px;
 }
 
 .content-wraper .nav {
@@ -238,6 +239,7 @@
     height: 200px;
     font-size: 7.5em;
     animation: type 3s steps(18, end) 1 forwards, blink-caret 1.1s 3 forwards;
+    animation-delay: 4.5s;
   }
 }
 
