@@ -8,6 +8,7 @@
   --altTextColor: #f7d82d
   --bordeR: 6px
   --bShadow: 0px 0px 20px 2px rgba(51,51,51,1);
+  --mTop: 200px
 .content-wraper
   display: flex
   flex-direction: column
@@ -39,6 +40,7 @@
       justify-content: space-between
       height: 50px
       width: 50px
+      margin-left: 7px
       margin-top: 7px
       transition: .5s
       z-index: 10
@@ -86,6 +88,7 @@
     .headder__text
       display: flex
       flex-direction: column
+      margin-right: 8px
 
       .headder__text__name
         font-size: 3.5em
@@ -167,32 +170,34 @@
       align-items: center
       overflow: hidden
       height: 50px
-      font-size: 3em
+      font-size: 2em
       white-space: nowrap
       //border-right: solid 1px var(--altTextColor)
       width: 0%
-      animation: type 3s steps(18, end) 1 forwards, blink-caret 1.1s 3 forwards
+      animation: type 3s steps(18, end) 1 forwards, blink-caretsmall 1.1s 3 forwards
       animation-delay: .5s
       @media (min-width: 1000px)
         border-width: 7px
         height: 200px
         font-size: 10em
+        animation: type 3s steps(18, end) 1 forwards, blink-caret 1.1s 3 forwards
     h2
       display: flex
       align-items: center
       overflow: hidden
       height: 50px
-      font-size: 2.5em
+      font-size: 1.5em
       white-space: nowrap
       //border-right: solid 1px var(--altTextColor)
       width: 0%
-      animation: type 3s steps(18, end) 1 forwards, blink-caret 1.1s 3 forwards
+      animation: typesmall 3s steps(18, end) 1 forwards, blink-caretsmall 1.1s 3 forwards
       //animation: type 3s steps(18, end) 1 forwards, blink-caret 1.1s step-end infinite
       animation-delay: 4.5s
       @media (min-width: 1000px)
         border-width: 7px
         height: 200px
         font-size: 7.5em
+        animation: type 3s steps(18, end) 1 forwards, blink-caret 1.1s 3 forwards
   .about
     display: flex
     flex-direction: column
@@ -204,7 +209,7 @@
     border-radius: var(--bordeR)
     box-shadow: var(--bShadow)
     color: var(--textColor)
-    margin-top: 150px
+    margin-top: var(--mTop)
     overflow: hidden
     @media (min-width: 1000px)
       justify-content: center
@@ -242,7 +247,7 @@
     align-items: center
     width: 90%
     height: 90vw
-    margin-top: 150px
+    margin-top: var(--mTop)
     background: var(--cardColor)
     border-radius: var(--bordeR)
     box-shadow: var(--bShadow)
@@ -255,13 +260,20 @@
       background-position: center
       background-size: contain
       background-repeat: no-repeat
+      background-image: url("imgs/codenotes.png")
       button
-        margin-top: 40px
-        width: 100px
-        height: 50px
+        font-size: .5em
+        width: 50px
+        height: 25px
         border: none
-        border-bottom: 2px solid var(--altTextColor)
+        border-bottom: 1px solid var(--altTextColor)
         background: var(--cardColor)
+        @media (min-width: 1000px)
+          font-size: 1em
+          width: 100px
+          height: 50px
+          border-bottom: 2px solid var(--altTextColor)
+          margin-top: 40px
         a
           text-decoration: none
           color: var(--textColor)
@@ -302,7 +314,7 @@
     width: 90%
     height: auto
     justify-content: space-around
-    margin-top: 150px
+    margin-top: var(--mTop)
     align-self: center
     background: var(--cardColor)
     font-family: 'IBM Plex Mono', monospace
@@ -365,6 +377,9 @@
           margin-right: 7px
           border: none
           background: var(--cardColor)
+          &:hover
+            box-shadow: 0px 0px 13px 1px rgba(247,216,45,1)
+            
         textarea
           width: 100%
           height: auto
@@ -382,6 +397,20 @@
 @keyframes blink-caret 
   0%
     border-right: solid 7px var(--altTextColor)  
+    
+  50%  
+    border-color: transparent 
+  100%
+    border-color: var(--altTextColor)
+
+@keyframes typesmall
+  0%
+   width: 0%
+  100%
+    width: 81%
+@keyframes blink-caretsmall
+  0%
+    border-right: solid 1px var(--altTextColor)  
     
   50%  
     border-color: transparent 

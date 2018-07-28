@@ -16,7 +16,6 @@ function portPicker(){
   this.classList.add("slected")
   lastLi = this
   let picked = this.innerHTML
-  
   mywork.classList.remove(`${lastpicked}`)
   mywork.classList.add("mywork__site",`${picked}`)
   lastpicked = picked
