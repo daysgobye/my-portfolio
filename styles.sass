@@ -11,7 +11,7 @@
 .content-wraper
   display: flex
   flex-direction: column
-  background-image: url("imgs/back2.jpg")
+  background-image: url("imgs/back2.png")
   @media (min-width: 1000px)
     background-image: url("imgs/back4.jpg")
   height: 1000px
@@ -144,54 +144,55 @@
     transition: 1s
     z-index: 1
     // ----------------------homepage--------------------
-  .content
+  .home
     display: flex
+    flex-direction: column
     justify-content: center
     align-items: center
-    margin-top: 150px
     background: hsla(0, 0%, 29%, 0.34)
     width: 100%
     height: 100vh
     position: fixed
     font-family: 'IBM Plex Mono', monospace
-
-    // display: flex
-    // flex-direction: column
-    // align-self: center
-    // width: 90%
-    // height: auto
-    // background-color: var(--cardColor)
-    // color: var(--textColor)
-    // margin-top: 150px
-    // border-radius: var(--bordeR)
-    // box-shadow: var(--bShadow)
+    color: var(--textColor)
+    text-align: center
     @media (min-width: 1000px)
+      align-items: center
       justify-content: center
       font-size: 1em
       letter-spacing: .15em
       line-height: 30px
     h1
-      font-size: 200px
-      color: var(--textColor)
-      transition: 1s
-    .word
       display: flex
       align-items: center
-      border-bottom: 1px solid #ffffff
-      height: 200px
-    .here
+      overflow: hidden
+      height: 50px
+      font-size: 3em
+      white-space: nowrap
+      //border-right: solid 1px var(--altTextColor)
+      width: 0%
+      animation: type 3s steps(18, end) 1 forwards, blink-caret 1.1s 3 forwards
+      animation-delay: .5s
+      @media (min-width: 1000px)
+        border-width: 7px
+        height: 200px
+        font-size: 10em
+    h2
       display: flex
-      h1.hide 
-        transition: all 1.5s ease-in-out
-        animation: showName 1.37s forwards
-      .mid
-          padding-left: 80px
-          padding-right: 80px   
-    .gone
-      display: flex
-      .hide
-        display: none  
-    //=------------------------------about-----------------
+      align-items: center
+      overflow: hidden
+      height: 50px
+      font-size: 2.5em
+      white-space: nowrap
+      //border-right: solid 1px var(--altTextColor)
+      width: 0%
+      animation: type 3s steps(18, end) 1 forwards, blink-caret 1.1s 3 forwards
+      //animation: type 3s steps(18, end) 1 forwards, blink-caret 1.1s step-end infinite
+      animation-delay: 4.5s
+      @media (min-width: 1000px)
+        border-width: 7px
+        height: 200px
+        font-size: 7.5em
   .about
     display: flex
     flex-direction: column
@@ -277,22 +278,23 @@
           color: var(--textColor)
           font-family: 'IBM Plex Mono', monospace
           text-align: right
+          text-transform: capitalize
             
         .slected
           text-decoration: line-through
           animation: glitch .51s 1
-    .Camp_Site
-      background-image: url("imgs/camp.png") 
-      animation: glitch .31s 1
-    .Code_Notes
+    .camp_site
+      background-image: url("imgs/camp.png")
+      // animation: glitch .31s 1
+    .code_notes
       background-image: url("imgs/codenotes.png")
-      animation: fadein .1s 1
-    .Clean_Water
+      // animation: fadein .1s 1
+    .clean_water
       background-image: url('imgs/water.png')
-      animation: glitch .21s 1
-    .Login_Page
+      // animation: glitch .21s 1
+    .login_page
       background-image: url("imgs/moutan.png")
-      animation: animate .21s 1
+      // animation: animate .21s 1
 
   .contact
     display: flex
@@ -371,7 +373,21 @@
           resize: none
           color: var(--altTextColor)
           background: var(--altCardColor)
-    //------------------------------------keyframes-----------      
+    //------------------------------------keyframes-----------  
+@keyframes type
+  0%
+   width: 0%
+  100%
+    width: 91%
+@keyframes blink-caret 
+  0%
+    border-right: solid 7px var(--altTextColor)  
+    
+  50%  
+    border-color: transparent 
+  100%
+    border-color: var(--altTextColor)
+
 @keyframes showName
   0%
     opacity: 0

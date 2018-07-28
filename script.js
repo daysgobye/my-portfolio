@@ -30,11 +30,6 @@ function hamburger__clicked() {
   headHam.classList.toggle("headder__hamburger__clicked") 
   nav.classList.toggle ("nav__clicked")
 }
-function showName(){
-  frontPage.classList.remove('gone')
-  frontPage.classList.add('here')
-}
-setTimeout(showName,2000)
 hammy.addEventListener('click',hamburger__clicked)
 list.forEach(item => item.addEventListener('click',portPicker)) 
 liveSite.addEventListener('click', live)
