@@ -15,7 +15,7 @@
   background-image: url("imgs/back2.png")
   @media (min-width: 1000px)
     background-image: url("imgs/back4.jpg")
-  height: 1000px
+  height: 1500px
   background-attachment: fixed
   background-position: center
   background-repeat: no-repeat
@@ -220,7 +220,7 @@
       width: 98%
       height: 200px
       color: var(--textColor)
-      font-size: 3em
+      font-size: 2em
       justify-content: flex-end
       font-family: 'IBM Plex Mono', monospace
       animation: animate .27s 2
@@ -231,7 +231,8 @@
     .about__content
       color: var(--textColor)
       width: 90%
-      animation: fadein 1s 1
+      // animation: fadein 1s 1
+      font-size: .8em
       @media (min-width: 1000px)
         font-size: 1em
         letter-spacing: .15em
@@ -240,8 +241,12 @@
         float: left
         margin-right: 1.5em
         margin-bottom: .5em
+        width: 100px
+        height: 170px
         shape-outside:  polygon(50% 0%, 67% 4%, 74% 16%, 75% 38%, 67% 52%, 90% 64%, 97% 81%, 76% 96%, 53% 99%, 7% 92%, 0% 86%, 1% 64%, 20% 51%, 14% 32%, 16% 13%, 21% 3%);
-
+        @media (min-width: 1000px)
+          width: 300px
+          height: 370px
   .mywork
     display: flex
     flex-direction: column
